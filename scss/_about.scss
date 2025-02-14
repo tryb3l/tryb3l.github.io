@@ -1,0 +1,15 @@
+@use 'variables';
+@use 'mixins';
+
+#about {
+    .social-icons{
+        .social-icon{
+            i{
+                color: variables.$dark-text;
+                &:hover{
+                    color: variables.$primary-color;
+                }
+            }
+        }
+    }
+}
