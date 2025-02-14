@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/tryb3l/cv#readme",
   "dependencies": {
-    "sass": "^1.84.0"
+    "sass": "^1.85.0"
   }
 }
