@@ -7,23 +7,21 @@
         <meta name="author" content="Bohdan Trybel">
         <title>Bohdan Trybel - CV</title>
 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:700|Ubuntu" rel="stylesheet">
 
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
         <link href="css/main.css" rel="stylesheet">
 
         <style>
-        /* Keep this for your custom icon sizes and any overrides */
         .fa-ul > li {
            margin-bottom: 0.5rem;
          }
          .fa-li {
             margin-right: 0.5rem;
-         }
-         .dev-icons .list-inline-item {
-             margin-right: 1rem;
-             font-size: 2rem;
          }
         .list-inline-item i[title]:hover:after {
             content: attr(title);
@@ -35,61 +33,72 @@
             white-space: nowrap;
             z-index: 1;
         }
-
-        @media (max-width: 768px) {
-          .dev-icons .list-inline-item {
-            font-size: 1.5rem;
-        }
-        }
         </style>
 
     </head>
     <body>
-        <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="sidebar-wrapper" aria-labelledby="sidebarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="sidebarLabel">Bohdan Trybel</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class="d-lg-none">
-                    <img class="img-fluid img-profile rounded-circle mx-auto d-block mt-0 mb-2" src="img/profile.jpg" alt="Profile Picture">
-                </div>
-                <div class="sidebar-heading">Bohdan Trybel</div>
-                <div class="list-group list-group-flush">
-                    <a href="#about" class="list-group-item list-group-item-action bg-light">About Me</a>
-                    <a href="#experience" class="list-group-item list-group-item-action bg-light">Experience</a>
-                    <a href="#education" class="list-group-item list-group-item-action bg-light">Education</a>
-                    <a href="#skills" class="list-group-item list-group-item-action bg-light">Skills</a>
-                    <a href="#interests" class="list-group-item list-group-item-action bg-light">Interests</a>
-                    <a href="#awards" class="list-group-item list-group-item-action bg-light">Certificates</a>
-                </div>
-            </div>
+        <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar-wrapper" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="sidebarLabel">Bohdan Trybel</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body d-flex flex-column">
+          <div class="list-group list-group-flush flex-grow-1">
+            <a href="#about" class="list-group-item list-group-item-action ">About Me</a>
+            <a href="#experience" class="list-group-item list-group-item-action ">Experience</a>
+            <a href="#education" class="list-group-item list-group-item-action ">Education</a>
+            <a href="#skills" class="list-group-item list-group-item-action ">Skills</a>
+            <a href="#interests" class="list-group-item list-group-item-action ">Interests</a>
+            <a href="#awards" class="list-group-item list-group-item-action ">Certificates</a>
+          </div>
+          <!-- Dark Mode Toggle for Mobile -->
+          <div class="mt-3 text-center">
+            <button id="dark-mode-toggle-mobile" class="btn btn-toggle">
+              <span class="material-icons sun-icon">light_mode</span>
+              <span class="material-icons dark-icon">dark_mode</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-
-        <div class="d-flex" id="wrapper">
-            <aside class="bg-light border-right d-none d-lg-block" id="sidebar-wrapper-desktop">
-                <div class="d-none d-lg-block">  <img class="img-fluid img-profile rounded-circle mx-auto d-block mt-5 mb-2" src="img/profile.jpg" alt="Profile Picture">
-                </div>
+      <!-- Main Page Wrapper -->
+      <div class="d-flex" id="wrapper">
+        <!-- Desktop Sidebar -->
+        <aside class="border-right d-none d-lg-block" id="sidebar-wrapper-desktop">
+            <div class="d-flex flex-column h-100">
+              <div class="text-center py-4">
+                <img class="img-fluid img-profile rounded-circle mx-auto d-block mb-2" src="https://avatars.githubusercontent.com/u/56679619?v=4" alt="Profile Picture"/>
                 <div class="sidebar-heading">Bohdan Trybel</div>
-                <div class="list-group list-group-flush">
-                    <a href="#about" class="list-group-item list-group-item-action bg-light">About Me</a>
-                    <a href="#experience" class="list-group-item list-group-item-action bg-light">Experience</a>
-                    <a href="#education" class="list-group-item list-group-item-action bg-light">Education</a>
-                    <a href="#skills" class="list-group-item list-group-item-action bg-light">Skills</a>
-                    <a href="#interests" class="list-group-item list-group-item-action bg-light">Interests</a>
-                    <a href="#awards" class="list-group-item list-group-item-action bg-light">Certificates</a>
-                </div>
-            </aside>
+              </div>
+            <div class="list-group list-group-flush flex-grow-1">
+              <a href="#about" class="list-group-item list-group-item-action ">About Me</a>
+              <a href="#experience" class="list-group-item list-group-item-action ">Experience</a>
+              <a href="#education" class="list-group-item list-group-item-action ">Education</a>
+              <a href="#skills" class="list-group-item list-group-item-action ">Skills</a>
+              <a href="#interests" class="list-group-item list-group-item-action ">Interests</a>
+              <a href="#awards" class="list-group-item list-group-item-action ">Certificates</a>
+            </div>
+            <!-- Dark Mode Toggle for Desktop -->
+            <div class="sidebar-footer text-center py-3">
+                <button id="dark-mode-toggle-desktop" class="btn btn-toggle">
+                  <span class="material-icons sun-icon">light_mode</span>
+                  <span class="material-icons dark-icon">dark_mode</span>
+                </button>
+              </div>
+          </div>
+        </aside>
 
-        <div id="page-content-wrapper">
-             <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary border-bottom d-lg-none">
-                <a class="navbar-brand" href="#">Bohdan Trybel</a>
-                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-wrapper" aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav>
-            <main class="container-fluid p-0">
+              <!-- Page Content -->
+            <div id="page-content-wrapper">
+                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary border-bottom d-lg-none">
+                    <a class="navbar-brand" href="#">Bohdan Trybel</a>
+                    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar-wrapper" aria-controls="sidebar-wrapper" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+
+            <main class="resume-content p-0">
 
                 <hr class="m-3">
 
@@ -98,13 +107,13 @@
                         <h1 class="mb-0">Bohdan
                             <span class="text-primary">Trybel</span>
                         </h1>
-                        <div class="subheading mb-5">QA Automation Engineer, Legnica, Poland
+                        <div class="subheading mb-5">Software QA Automation Engineer, Legnica, Poland
                         </div>
                         <p class="lead mb-5">Results-driven Software Quality Assurance Engineer with a strong track record of identifying and resolving critical software defects through meticulous testing and effective collaboration with cross-functional teams. Experienced in Agile environments, I excel at building strong relationships and implementing efficient testing processes that streamline development and enhance product quality. Proficient in E2E, integration, and performance testing using industry-standard tools.</p>
                         <div class="social-icons">
-                            <a class="social-icon" href="YOUR_GITHUB_LINK"><i class="fab fa-github"></i></a>
-                            <a class="social-icon" href="mailto:YOUR_EMAIL_ADDRESS"><i class="fas fa-envelope"></i></a>
-                            <a class="social-icon" href="YOUR_LINKEDIN_LINK"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="social-icon" href="https://github.com/tryb3l"><i class="fab fa-github"></i></a>
+                            <a class="social-icon" href="mailto:bogdan.trybel@gmail.com"><i class="fas fa-envelope"></i></a>
+                            <a class="social-icon" href="https://www.linkedin.com/in/trybel/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </section>
@@ -221,33 +230,26 @@
                         <h2 class="mb-5">Skills</h2>
                         <div class="subheading mb-3">Programming Languages &amp; Tools</div>
                               <ul class="list-inline dev-icons">
-                                <li class="list-inline-item" title="Playwright"><i class="fab fa-js-square"></i></li>
-                                <li class="list-inline-item" title="Selenium"><i class="fab fa-java"></i></li>
-                                <li class="list-inline-item" title="xUnit"><i class="fas fa-code"></i></li>
-                                <li class="list-inline-item" title="Cypress"><i class="fab fa-chrome"></i></li>
-                                <li class="list-inline-item" title="Appium"><i class="fas fa-mobile-alt"></i></li>
-                                <li class="list-inline-item" title="Rest Assured"><i class="fas fa-network-wired"></i></li>
-                                 <li class="list-inline-item" title="JUnit"><i class="fab fa-java"></i></li>
-                                  <li class="list-inline-item" title="TestNG"><i class="fab fa-java"></i></li>
-                                  <li class="list-inline-item" title="JMeter"><i class="fas fa-tachometer-alt"></i></li>
-
-                                <li class="list-inline-item" title="JavaScript"><i class="fab fa-js"></i></li>
-                                  <li class="list-inline-item" title="TypeScript"><i class="fab fa-ts"></i></li>
+                                <li class="list-inline-item " title="Playwright"><i class="devicon-playwright-plain"></i></li>
+                                <li class="list-inline-item" title="JavaScript"><i class="fa-brands fa-js"></i></li>
+                                <li class="list-inline-item" title="Node.js"><i class="fa-brands fa-node"></i></li>
+                                <li class="list-inline-item" title="TypeScript"><i class="devicon-typescript-plain"></i></li>
                                 <li class="list-inline-item" title="Java"><i class="fab fa-java"></i></li>
-                                <li class="list-inline-item" title="C#"><i class="fab fa-csharp"></i></li>
-                                  <li class="list-inline-item" title="Python"><i class="fab fa-python"></i></li>
-                                  <li class="list-inline-item" title=".NET"><i class="fab fa-microsoft"></i></li>
-
+                                <li class="list-inline-item" title=".NET"><i class="devicon-dot-net-plain-wordmark"></i></li>
                                 <li class="list-inline-item" title="Agile"><i class="fas fa-project-diagram"></i></li>
                                 <li class="list-inline-item" title="CI/CD"><i class="fas fa-sync-alt"></i></li>
-                                <li class="list-inline-item" title="Azure"><i class="fab fa-microsoft"></i></li>
+                                <li class="list-inline-item" title="GithubActions"><i class="devicon-githubactions-plain"></i></li>
+                                <li class="list-inline-item" title="Azure"><i class="devicon-azuredevops-plain"></i></li>
                                 <li class="list-inline-item" title="Git"><i class="fab fa-git-alt"></i></li>
                                 <li class="list-inline-item" title="GitLab"><i class="fab fa-gitlab"></i></li>
-                                <li class="list-inline-item" title="Jira"><i class="fab fa-jira"></i></li>
+                                <li class="list-inline-item" title="Selenium"><i class="devicon-selenium-original"></i></li>
+                                <li class="list-inline-item" title="Jira"><i class="devicon-jira-plain-wordmark"></i></li>
                                 <li class="list-inline-item" title="Jenkins"><i class="fab fa-jenkins"></i></li>
                                 <li class="list-inline-item" title="Docker"><i class="fab fa-docker"></i></li>
                                 <li class="list-inline-item" title="Scrum"><i class="fas fa-users"></i></li>
-                                <li class="list-inline-item" title="SAFe"><i class="fas fa-sitemap"></i></li>
+                                <li class="list-inline-item" title="JMeter"><i class="fas fa-tachometer-alt"></i></li>
+                                <li class="list-inline-item" title="CentOS"><i class="devicon-centos-plain"></i></li>
+                                <li class="list-inline-item" title="GoogleGemini"><i class="devicon-google-plain"></i></li>
                               </ul>
 
                               <div class="subheading mb-3">Testing Types</div>
@@ -258,7 +260,6 @@
                                 <li><i class="fa-li fa fa-check"></i>Performance Testing</li>
                                 <li><i class="fa-li fa fa-check"></i>Regression Testing</li>
                                 <li><i class="fa-li fa fa-check"></i>UAT</li>
-                                <li><i class="fa-li fa fa-check"></i>Security Testing</li>
                               </ul>
 
                               <div class="subheading mb-3">Soft Skills</div>
@@ -293,40 +294,42 @@
                         <ul class="fa-ul mb-0">
                             <li  class="mb-3">
                                 <i class="fa-li fa fa-scroll"></i>
-                                <a href="LINK_TO_CERTIFICATE_1">Advanced Prompt Engineering Techniques, LinkedIn, 2024</a> </li>
+                                <a href="https://www.linkedin.com/learning/certificates/cbdaf2e3205be95528c610d0c29d1619d17ef3401ad65345854e157f4b33f25e">Quality Management for Operational Excellence, LinkedIn, 2024</a> </li>
                             <li  class="mb-3">
                                 <i class="fa-li fa fa-scroll"></i>
-                                <a href="LINK_TO_CERTIFICATE_2">Prompt Engineering: How to talk to AI’s, Linkedin, 2024</a>
+                                <a href="https://www.linkedin.com/learning/certificates/0704e3c22bf06b4cce322ccc786988d840e6b59d06bf9d902b50911b6b92dd55">Advanced Prompt Engineering Techniques, LinkedIn, 2024</a> </li>
+                            <li  class="mb-3">
+                                <i class="fa-li fa fa-scroll"></i>
+                                <a href="https://www.linkedin.com/learning/certificates/a6ea9f409f41883aee054e4dd2d06f79ffda3401fb39a63cc8de1e90f0b98622">Prompt Engineering: How to talk to AI’s, Linkedin, 2024</a>
                             </li>
                               <li  class="mb-3">
                                 <i class="fa-li fa fa-scroll"></i>
-                                <a href="LINK_TO_CERTIFICATE_3">Advanced Selenium: Page objects and GUI Automation, Linkedin, 2024</a>
+                                <a href="https://www.linkedin.com/learning/certificates/e6059ea9cec14b7b7541e0402d88665000fd28073a1274bc5a2d1c8868cd11ad">Advanced Selenium: Page objects and GUI Automation, Linkedin, 2024</a>
                               </li>
                               <li  class="mb-3">
                                 <i class="fa-li fa fa-scroll"></i>
-                                <a href="LINK_TO_CERTIFICATE_4">MetaTech University, Node.js &amp; Asynchronous JavaScript, 2024</a>
+                                <a href="">MetaTech University, Node.js &amp; Asynchronous JavaScript, 2024</a>
                               </li>
                               <li  class="mb-3">
                                  <i class="fa-li fa fa-scroll"></i>
-                                 <a href="LINK_TO_CERTIFICATE_5">JavaScript security, InfoSec, 2023</a>
+                                 <a href="https://www.coursera.org/account/accomplishments/specialization/WTVVRGS48SJ9">JavaScript security, InfoSec, 2023</a>
                                </li>
                                <li  class="mb-3">
                                  <i class="fa-li fa fa-scroll"></i>
-                                 <a href="LINK_TO_CERTIFICATE_6">DevOps &amp; Jenkins, Udemy, 2023</a>
+                                 <a href="https://www.udemy.com/certificate/UC-d71be9a4-9ea7-4142-b3e1-86e8ce25ff16/">DevOps &amp; Jenkins, Udemy, 2023</a>
                                </li>
                                <li  class="mb-3">
                                    <i class="fa-li fa fa-scroll"></i>
-                                   <a href="LINK_TO_CERTIFICATE_7">Programming with JavaScript, Meta, 2023</a>
+                                   <a href="https://www.coursera.org/account/accomplishments/verify/GANNUD94NKBL">Programming with JavaScript, Meta, 2023</a>
                                 </li>
                                 <li  class="mb-3">
                                      <i class="fa-li fa fa-scroll"></i>
-                                       <a href="LINK_TO_CERTIFICATE_8">Learning How To Learn, Coursera, 2022</a>
+                                       <a href="https://www.coursera.org/account/accomplishments/verify/B8YT9JMYLAC3">Learning How To Learn, Coursera, 2022</a>
                                 </li>
                                 <li  class="mb-3">
                                    <i class="fa-li fa fa-scroll"></i>
-                                   <a href="LINK_TO_CERTIFICATE_9">Selenium Webdriver with Java - basics to advanced + Frameworks, Udemy, 2022</a>
+                                   <a href="https://www.udemy.com/certificate/UC-b71cc3b6-5f69-4a61-aa31-1b309261f0b7/">Selenium Webdriver with Java - basics to advanced + Frameworks, Udemy, 2022</a>
                                 </li>
-
                         </ul>
                     </div>
                 </section>
